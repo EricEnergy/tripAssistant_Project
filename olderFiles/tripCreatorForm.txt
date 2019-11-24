@@ -1,0 +1,16 @@
+<form id="tripInput">
+    <input type="text" id="tripLocation">
+    <label for="tripLocation>Where are you going?</label>
+
+    <input type="date" id="tripStartDate">
+    <label for="tripStartDate">Trip start</label>
+
+    <input type="date" id="tripEndDate">
+    <label for="tripEndDate">Trip End</label>
+
+    <button id="tripBtn">Plan Trip!</button>
+</form>
+
+
+
+    

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trip Assistant</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *,*:before, *:after { 
+            margin:0; padding:0; box-sizing:border-box; 
+            transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000); 
+            transition-timing-function: cubic-bezier(0.420, 0.000, 0.580, 1.000);
+        }
+        body {
+            color:rgba(0,0,0,.85);
+            font-family:Arial, Helvetica, sans-serif;
+            font-size:18px;
+            line-height:1.3;
+        }
+        input, label {
+            display:block;
+        }
+        label{
+            margin-bottom:2em;
+        }
+        .clearfix:after {
+            content:'';
+            clear:both;
+            display:block;
+            height:0;
+        }
+    </style>
+</head>
+<body>
+
+<form id="checkBox">
+    <input type="checkbox" name="bars" value="option1" id="option1">
+    <input type="checkbox" name="rest" value="option2" id="option2">
+    <input type="checkbox" name="park" value="option3" id="option3">
+    <input type="checkbox" name="adult" value="option4" id="option4">
+    <input type="checkbox" name="food" value="option5" id="option5">
+    <input type="submit" id="checkboxSubmit">
+</form>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="localStorageFunctions.js"></script>
+    <script>
+        var tripInput = $('<form>').attr('id', 'tripInput');
+        var tripLocation = $('<input>').attr('type', 'text').attr('id', 'tripLocation');
+        var locationLabel = $('<label>').attr('for', 'tripLocation').text('Where are you going?');
+        var tripStartDate = $('<input>').attr('type', 'date').attr('id', 'tripStartDate');
+        var tripStartLabel = $('<label>').attr('for', 'tripStartDate').text('Trip Start');
+        var tripEndDate = $('<input>').attr('type', 'date').attr('id', 'tripEndDate');
+        var tripEndLabel = $('<label>').attr('for', 'tripEndDate').text('Trip End');
+        var tripBtn = $('<button>').attr("id", "tripBtn").text('Plan Trip!');
+
+        $('body').append(tripInput);
+        tripInput.append(tripLocation, locationLabel, tripStartDate, tripStartLabel, tripEndDate, tripEndLabel, tripBtn);
+        var elements = [];
+        $('#checkboxSubmit').on('click', event=>{
+            event.preventDefault();
+            
+            $('#checkbox input[type=checkbox]:checked').each(function(){
+                elements.push(this.value);
+                return elements;
+            });
+            
+            console.log(elements);
+        })
+        
+    </script>
+</body>
+</html>

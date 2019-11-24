@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,900&display=swap');
+*,*:before, *:after { margin:0; padding:0; box-sizing:border-box; 
+	transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000); 
+    transition-timing-function: cubic-bezier(0.420, 0.000, 0.580, 1.000);
+}
+body {
+    background-color:#0b0c10;
+    background-image: url(trianglify-lowres.png);
+    background-size:cover;
+    background-repeat:no-repeat;
+    color:#c5c6c7;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    line-height:1.3;
+    min-height:100vh;
+}
+h1,h2,h3,h4 {
+	font-weight:900;
+	text-transform:capitalize;
+}
+h1 {
+	color: #66fcf1;
+	font-size: 6em;
+	line-height: 1;
+	text-transform: capitalize;
+}
+input, label, button {
+    color: inherit;
+    display:block;
+    font: inherit;
+}
+ul {
+	list-style: none;
+	padding: 0 0 1em;
+}
+#tripInput input {
+    background: transparent;
+    border: none;
+    padding: 1em 0 .5em;
+    width:100%;
+}
+#tripInput label{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: -1;
+}
+button {
+    background: #66fcf1;
+    border: none;
+    color: #0b0c10;
+    cursor:pointer;
+    display: inline-block;
+    font-size: 1em;
+    padding: .75em 2em;
+}
+button:focus, input:focus {
+    outline:none;
+}
+[type=date] {
+	color: #c5c6c700;
+}
+[type=date]:focus, [type=date]:valid {
+	color: #c5c6c7;
+}
+#newTripBtn, #upcomingTripsBtn {
+    background: none;
+    border: .25em solid;
+    color: #66fcf1;
+    font-size: 1.5em;
+    margin: 3em auto 0;
+    max-width: 15em;
+    width: 100%;
+}
+.searchActivitiesBtn {
+    font-size: 2em;
+    padding: .75em 2em;
+    line-height: 0;
+}
+#welcomePage {
+	max-width: 41em;
+    position: absolute;
+    display: grid;
+	top: 50%;
+	left: 50%; 
+	transform: translate(-50%,-50%);
+    width: 100%; 
+    justify-items: center;
+    align-items: center; 
+}
+.tripPageModal #welcomePage, .upcomingTripsModal #welcomePage {
+    display: none;
+}
+#tripPage {
+    display: none;
+}
+.tripPageModal #tripPage {
+    display: block;
+    padding: 2em 2em;
+}
+#tripPage > div {
+	margin-bottom: 3em;
+}
+#tripPage h2 {
+	color: #66fcf1;
+	font-size: 4em;
+}
+#upcomingTripsDisplay {
+    display:none; 
+}
+.upcomingTripsModal #upcomingTripsDisplay {
+    display:block;
+    padding: 4em 2em;
+}
+#upcomingTripsHeader {
+	color: #66fcf1;
+	font-size: 4em;
+	line-height: 1.1;
+}
+#upcomingTripsDisplay p, #tripPage p, .activitiesSearchResult, ul li {
+	font-size: 1.5em;
+	background: #1f2833;
+	cursor: pointer;
+	margin-top: .5em;
+	padding: .5em;
+	text-transform: capitalize;
+}
+.notScheduled {
+	color: #0b0c10;
+	background:#c5c6c7;
+}
+.hidden {
+	display:none;
+}
+.activitiesSearchResult {
+	background: #0b0c10;
+}
+.newTripModal #welcomePage {
+	opacity: .3;
+}
+#tripInput, #activitiesCheckBoxForm, #activitiesSearchResultsPanel {
+    display:none;
+    background: #1f2833;
+    border: 2px solid #66fcf1;
+    font-size: 2em;
+    padding: 2em;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index:2;
+    width: 85%;
+}
+#activitiesSearchResultsPanel {
+	top: 4em;
+	right: 2em;
+	left: 3em;
+	height: calc(100vh - 6em);
+	transform: none;
+}
+#activitiesSearchResultsPanel div {
+	overflow-y: scroll;
+	position: absolute;
+	left: 2em;
+	right: -1.25em;
+	padding-right: 2em;
+	bottom: 2em;
+	top: 4em;
+}
+#tripInput > div {
+    position:relative;
+    overflow: hidden;
+    margin-bottom: .5em;
+}
+.newTripModal #tripInput {
+	display:block;
+}
+[type=checkbox] {
+    height: 1em;
+    width: 1em;
+}
+.activitiesCheckModal #activitiesCheckBoxForm, .activitiesSearchResultsModal #activitiesSearchResultsPanel {
+    display:block;
+    font-size: 1em;
+}
+.activitiesCheckModal,.activitiesSearchResultsModal{
+	overflow: hidden;
+}
+.activitiesCheckModal #tripPage, .activitiesSearchResultsModal #tripPage {
+	opacity:.3;
+}
+#activitiesCheckBoxForm > div {
+    background: #0b0c10;
+    width: 48%;
+    float: left;
+    margin: 1%;
+}
+#activitiesCheckBoxForm input {
+    float: left;
+    cursor: pointer;
+    margin: 1em;
+}
+#activitiesCheckBoxForm label {
+    display: block;
+    cursor: pointer;
+    padding: 1em;
+    line-height: 1;
+}
+.activitiesCheckBoxSearch {
+    margin: 1em 0 0 1%;
+    font-size: 1.5em;
+}
+#activitiesCheckBoxForm h3, #activitiesSearchResultsPanel h2 {
+    font-size: 1.5em;
+    color: #66fcf1;
+    margin-left: 1%;
+}
+.graphic {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    stroke: #c5c6c7;
+    fill: none;
+    pointer-events: none;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.75s, stroke 0.75s;
+    -webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+    transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+}
+#tripInput input:focus ~ .graphic,
+#tripInput input:valid ~ .graphic {
+    stroke:#66fcf1;
+    -webkit-transform: translate3d(-66.6%, 0, 0);
+    transform: translate3d(-66.6%, 0, 0)
+}
+#tripInput input:focus ~ label,
+#tripInput input:valid ~ label {
+	color: #66fcf1;
+	transform: translateY(0);
+	top: 0;
+	font-size: .5em;
+}
+.closeBtn {
+	background: #66fcf1;
+	border-radius:50%;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	cursor:pointer;
+	position:absolute;
+	top: -1em;
+	right: -1em;
+	height: 2em;
+	width: 2em;
+	z-index: 3;
+}
+.closeBtn span {
+	color: #45a29e;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 1.5em;
+	font-weight: 900;
+	line-height: 0;
+}
+.backBtn {
+    position: fixed;
+    bottom: 0em;
+    right: 0em;
+    background: #66fcf1;
+    color:#0b0c10;
+    z-index:10;
+}
+.mask {
+    position: absolute;
+    background: #0b0c10;
+    right: -3.1em;
+    width: 3em;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.weatherPlace {
+    display: inline-block;
+    margin-left: 2em;
+    width: 7em;
+}
+.weatherPlace img {
+    float: left;
+}
+.weatherBox {
+    float: right;
+    position: absolute;
+    top: 2em;
+    right: 2em;
+}
+.clearfix:after {
+    content:'';
+    clear:both;
+    display:block;
+    height:0;
+}
+
+.colors span:nth-of-type(1) {
+    background:#0b0c10;
+
+    background:#1f2833;
+
+    background:#c5c6c7;
+
+    background:#66fcf1;
+
+    background:#45a29e;
+}
+.lvl1 {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.lvl2 {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.lvl3 {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.lvl4 {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.lvl5 {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+@media only screen and (max-width: 760px ){
+    body { font-size:16px; }
+}
+@media only screen and (max-width: 670px ) {
+    h1 { font-size:14vw; }
+    #welcomePage p {
+    	text-align:left;
+    	padding: 0 1em;
+    }
+}
+@media only screen and (max-width: 570px ) {
+	#tripInput, #activitiesCheckBoxForm, #activitiesSearchResultsPanel{
+		font-size:1.5em;
+	}
+	#activitiesCheckBoxForm label {
+		padding: 1.5em;
+	}
+	#activitiesCheckBoxForm input {
+		margin: 1.5em 1em 0;
+	}
+}
+@media only screen and (max-width: 360px ) {
+    #newTripBtn, #upcomingTripsBtn {
+    	width: 96%;
+    	margin: 2em 2%;
+    	padding: .75em;
+    }
+}
