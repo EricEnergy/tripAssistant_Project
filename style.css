@@ -5,7 +5,7 @@
 }
 body {
     background-color:#0b0c10;
-    background-image: url(trianglify-lowres.png);
+    background-image: url("images/trianglify-lowres.png");
     background-size:cover;
     background-repeat:no-repeat;
     color:#c5c6c7;
