@@ -1,9 +1,7 @@
 # Trip Assistant
 https://ericenergy.github.io/tripAssistant_Project/
 ## Introduction
-This application was developed with the purpose of creating a tool that will be helpful for any person that will be travelling to a place that they may not be familiar with.
-It leverages existing third party APIs to provide the user with information that may be relevant for it’s upcoming trip.
-Additionally, it utilizes the browser’s as a database to save their data; thus, avoiding the need for external data storage such as physical or cloud servers.
+This application was developed with the purpose of creating a tool that will be helpful for any person that will be traveling to a place that they may not be familiar with. It leverages existing third-party APIs to provide the user with information that may be relevant for an upcoming trip. Additionally, it utilizes the browser’s as a database to save their data; thus, avoiding the need for external data storage such as physical or cloud servers.
 
 
 
