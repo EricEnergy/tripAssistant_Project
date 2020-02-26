@@ -7,6 +7,21 @@ Additionally, it utilizes the browser’s as a database to save their data; thus
 
 
 
+## How this Works
+![homescreen](images/a1.jpg)
+- The home screen will be where you will either create a new trip or bring up an exsisting trip to update. 
+
+![itinerary](images/a2.jpg)
+- After clicking to Create a new itinerary, a box will appear allowing you to enter the city you will be visiting so our 3rd party API know where it will need to search for actities, as well as a starting and ending date of you trip.
+
+![schedule](images/a3.jpg)
+- After creating a new itinerary, you will click on a day you want to add an activity for. 
+
+![menu](images/a4.jpg)
+- Now you are ready to pick the type of activities you are looking to do while you are there. Go ahead and click on a few and hit search. 
+
+![menu](images/a5.jpg)
+- A list will now be populated of activities, or places to visit based on your selected criteria. Once you click on an option that has been populated for you, that activity will be added to you schedule.
 ---
 
 ## Technologies
@@ -41,7 +56,6 @@ To:
 - Anthony Cooper
 - Jed Kendall
 - Sasha Peters
-
 
 
 
